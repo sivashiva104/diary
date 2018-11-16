@@ -1,0 +1,52 @@
+<p class="diary">
+<span class="day">21</span>
+<span class="month">March</span>
+<span class="year">2012</span>
+</p>
+
+p.diary{
+font-family: 'Prosto One', cursive; /*Prosto One is available at http://www.google.com/webfonts*/
+position: relative; /*for more info on positioning see the Support section below*/
+display: inline-block; /*prevent the paragraph from spanning the width of container. You could instead use a fixed width, but this way is neater*/
+height: 100px;
+padding:5px;
+background: #dcdac6;
+/*apply a small drop shadow to the date*/
+-webkit-box-shadow: 3px 3px 4px rgba(99,99,99,.8);
+-moz-box-shadow: 3px 3px 4px rgba(99,99,99,.8);
+box-shadow: 3px 3px 4px rgba(99,99,99,.8);
+/*give the text a drop shadow*/
+text-shadow: 2px 2px 5px #919191;
+}
+/**NEXT STYLE THE DAY, MONTH AND YEAR**/
+/*Day*/
+p.diary .day{
+position: absolute; /*removes the date from the normal flow, allowing the month & year to be wrapped around it*/
+top: 10px; 
+left:30px;
+font-size: 60px;
+color: #aa0e3a;
+}
+/*Month*/
+p.diary .month{
+position: relative;
+top: 60px; /*size of .day font and its shadow*/
+left: 20px;
+font-size:25px;
+color: #3b788c;
+}
+/*Year*/
+p.diary .year{
+position: relative;
+display: inline-block;
+top: 40px; 
+left:0;
+font-size:35px;
+color: #ca4b29;
+/*rotate the year by 90 degrees anticlockwise*/
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+transform: rotate(-90deg);
+}
